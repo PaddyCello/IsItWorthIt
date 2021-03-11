@@ -16,11 +16,11 @@ const CountryIndex = () => {
 
 
   return (
-    <div>
+    <ul>
       {countries.map(country => {
-        return <Link to={`/${country.name}`} key={country.name}><p>{country.name}</p></Link>
+        return <Link to={`/${country.name}`} key={country.name}><li>{country.name}</li></Link>
       })}
-    </div>
+    </ul>
   )
 }
 
