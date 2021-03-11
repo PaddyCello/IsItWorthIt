@@ -25,7 +25,7 @@ const CountryCard = () => {
   }
 
   const handleClick = () => {
-    history.push('/')
+    history.push('/countries')
   }
 
   console.log(typeof(parseInt(month)))

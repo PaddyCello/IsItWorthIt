@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import CountryIndex from './components/CountryIndex'
 import CountryCard from './components/CountryCard'
+import Home from './components/Home'
 
 
 function App() {
@@ -12,10 +13,13 @@ function App() {
     <>
       <BrowserRouter>
         <Switch>
-          <Route exact path='/'>
+          <Route exact path ='/'>
+            <Home />
+          </Route>
+          <Route exact path='/countries'>
             <CountryIndex />
           </Route>
-          <Route path='/:id'>
+          <Route path='/countries/:id'>
             <CountryCard />
           </Route>
         </Switch>

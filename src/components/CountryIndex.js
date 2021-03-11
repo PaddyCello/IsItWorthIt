@@ -16,7 +16,7 @@ const CountryIndex = () => {
 
   const handleChange = event => {
     const filteredArray = countries.filter(country => {
-      return country.name.includes(event.target.value)
+      return country.name.toUpperCase().includes(event.target.value.toUpperCase())
     })
     setFilteredCountries(filteredArray)
     console.log(event.target.value)
@@ -28,7 +28,7 @@ const CountryIndex = () => {
       <input type ='text' placeholder='search' onChange={handleChange}></input>
       <ul>
         {(filteredCountries.length > 0 ? filteredCountries : countries).map(country => {
-          return <Link to={`/${country.name}`} key={country.name}><li>{country.name} <img src ={country.flag}/></li></Link>
+          return <Link to={`/countries/${country.name}`} key={country.name}><li>{country.name} <img src ={country.flag}/></li></Link>
         })}
       </ul>
     </>
