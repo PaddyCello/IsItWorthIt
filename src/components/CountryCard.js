@@ -9,14 +9,36 @@ const CountryCard = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get(`https://travelbriefing.org/${params.id}?format=json`)
-      setCountriesInfo(response)
+      const response = await axios.get(`https://cors-anywhere.herokuapp.com/https://travelbriefing.org/${params.id}?format=json`)
+      setCountriesInfo(response.data)
     }
     getData()
   }, [])
-  console.log(countryInfo.data.names.name)
+  console.log('name', countryInfo.weather.January.tAvg)
+
+  const handleChange = event => {
+    console.log('event', event.target.value)
+  }
+
   return (
-    <h1>{countryInfo.data.names.name}</h1>
+    <div>
+      <h1>{countryInfo.weather.January.tAvg}</h1>
+      <select onChange={handleChange}>
+        <option>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+      </select>
+    </div>
+
   )
 }
 export default CountryCard
