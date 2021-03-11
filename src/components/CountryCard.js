@@ -20,7 +20,6 @@ const CountryCard = () => {
 
 
   const handleChange = event => {
-    // console.log('event', event.target.value)
     setMonth(event.target.value)
   }
 
@@ -28,11 +27,12 @@ const CountryCard = () => {
     history.push('/countries')
   }
 
-  const vaccinations = countryInfo.vaccinations
-  console.log('new variable<<', vaccinations)
-  // console.log(typeof(parseInt(month)))
-  // console.log('message>>>', countryInfo.vaccinations[0].name, countryInfo.vaccinations[0].message)
+  
+  
+
   if (!countryInfo) return null
+  const vaccinations = countryInfo.vaccinations
+  console.log(vaccinations)
   return (
     <>
       <h1>Average temperature: {month}C</h1>
