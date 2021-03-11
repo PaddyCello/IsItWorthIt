@@ -20,7 +20,7 @@ const CountryCard = () => {
 
 
   const handleChange = event => {
-    console.log('event', event.target.value)
+    // console.log('event', event.target.value)
     setMonth(event.target.value)
   }
 
@@ -28,7 +28,10 @@ const CountryCard = () => {
     history.push('/countries')
   }
 
-  console.log(typeof(parseInt(month)))
+  const vaccinations = countryInfo.vaccinations
+  console.log('new variable<<', vaccinations)
+  // console.log(typeof(parseInt(month)))
+  // console.log('message>>>', countryInfo.vaccinations[0].name, countryInfo.vaccinations[0].message)
   if (!countryInfo) return null
   return (
     <>
@@ -51,6 +54,13 @@ const CountryCard = () => {
       <p>Drinking Water: {countryInfo.water.short}</p>
       <p>Travel Advice: {countryInfo.advise.UA.advise}</p>
       {parseInt(month) < 20 ? <p>Blitz</p> : <p>Tops offf</p>}
+      {vaccinations.map(item => {
+        return <div key={item.name}>
+          <p >Name:{item.name}</p>
+          <p>Message:{item.message}</p>
+        </div> 
+      })
+      }
     </>
     
   )
