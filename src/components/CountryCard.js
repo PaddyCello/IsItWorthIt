@@ -6,6 +6,7 @@ const CountryCard = () => {
 
   const [countryInfo, setCountriesInfo] = useState(null)
   const [month, setMonth] = useState([])
+
   const params = useParams()
   const history = useHistory()
 
@@ -17,6 +18,7 @@ const CountryCard = () => {
     getData()
   }, [])
 
+
   const handleChange = event => {
     console.log('event', event.target.value)
     setMonth(event.target.value)
@@ -26,11 +28,11 @@ const CountryCard = () => {
     history.push('/')
   }
 
-
+  console.log(typeof(parseInt(month)))
   if (!countryInfo) return null
   return (
-    <div>
-      <h1>{month}</h1>
+    <>
+      <h1>Average temperature: {month}C</h1>
       <select onChange={handleChange}>
         <option value = {countryInfo.weather.January.tAvg}>January</option>
         <option value = {countryInfo.weather.February.tAvg}>February</option>
@@ -46,8 +48,11 @@ const CountryCard = () => {
         <option value = {countryInfo.weather.December.tAvg}>December</option>
       </select>
       <button onClick={handleClick}>Escape</button>
-    </div>
-
+      <p>Drinking Water: {countryInfo.water.short}</p>
+      <p>Travel Advice: {countryInfo.advise.UA.advise}</p>
+      {parseInt(month) < 20 ? <p>Blitz</p> : <p>Tops offf</p>}
+    </>
+    
   )
 }
 export default CountryCard

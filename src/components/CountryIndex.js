@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const CountryIndex = () => {
 
   const [countries, setCountries] = useState([])
-
+  const [filteredCountries, setFilteredCountries] = useState([])
   useEffect(() => {
     const getData = async () => {
       const response = await axios.get('https://restcountries.eu/rest/v2/all')
@@ -14,13 +14,24 @@ const CountryIndex = () => {
     getData()
   }, [])
 
+  const handleChange = event => {
+    const filteredArray = countries.filter(country => {
+      return country.name.includes(event.target.value)
+    })
+    setFilteredCountries(filteredArray)
+    console.log(event.target.value)
+  }
+
 
   return (
-    <ul>
-      {countries.map(country => {
-        return <Link to={`/${country.name}`} key={country.name}><li>{country.name}</li></Link>
-      })}
-    </ul>
+    <>
+      <input type ='text' placeholder='search' onChange={handleChange}></input>
+      <ul>
+        {(filteredCountries.length > 0 ? filteredCountries : countries).map(country => {
+          return <Link to={`/${country.name}`} key={country.name}><li>{country.name}</li></Link>
+        })}
+      </ul>
+    </>
   )
 }
 
