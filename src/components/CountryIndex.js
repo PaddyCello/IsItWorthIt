@@ -26,7 +26,7 @@ const CountryIndex = () => {
   return (
     <>
       <div className='search'>
-        <input type ='text' placeholder='search' onChange={handleChange}></input>
+        <input type ='text' placeholder='Search for a country' onChange={handleChange}></input>
       </div>
       <ul>
         {(filteredCountries.length > 0 ? filteredCountries : countries).map(country => {
