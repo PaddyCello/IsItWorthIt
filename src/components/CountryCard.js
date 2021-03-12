@@ -54,7 +54,7 @@ const CountryCard = () => {
             <h4>Currency: {countryInfo.currency.name}</h4>
           </aside>
           <aside className='vaccinations'>
-            <h4>Vaccinations:</h4>
+            <h2>Vaccinations:</h2>
             {vaccinations.map(item => {
               return <div key={item.name}>
                 <h5>{item.name}</h5>
@@ -66,6 +66,7 @@ const CountryCard = () => {
         </div>
         <div className='right-container'>
           <aside className='travel-advice'>
+            <h2>Travel Advice:</h2>
             <h4>Drinking Water: {countryInfo.water.short}</h4>
             <h4>Travel Advice: {countryInfo.advise.UA.advise}</h4>
           </aside>
