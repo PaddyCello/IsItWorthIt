@@ -33,7 +33,7 @@ input {
 }
 button {
   color: #000000;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'MedievalSharp', cursive;
   font-size: 20px;
   background-color: #ff0000;
   border-radius: 5px;
@@ -46,12 +46,14 @@ li:hover {
   background-color: #ff0000;
 }
 button:hover {
-  width: 150px;
+  width: 200px;
   height: 80px;
   font-size: 30px;
-  background-color: #0000ff;
+  background-color: #f6b93b;
   color: #ffffff;
   cursor: pointer;
+  transition: all 0.4s ease 0s;
+  border: 4px solid #f6b93b;
 }
 ul {
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4a/World_map_with_four_colours.svg');
@@ -88,7 +90,7 @@ ul {
   font-family: 'Roboto Slab', serif;
   font-size: 80px;
   text-shadow: 2px 2px 2px #000000;
-  color: #e9e510;
+  color: #f6b93b;
   letter-spacing: 5px;
 }
 h2,
@@ -107,6 +109,7 @@ select {
   font-size: 20px;
 }
 .back-button {
+  font-family: 'Open Sans', sans-serif;
   width: 250px;
 }
 .back-button:hover {
