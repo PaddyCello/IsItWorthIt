@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Open+Sans:wght@300&family=Roboto+Slab:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=MedievalSharp&family=Open+Sans:wght@300&family=Roboto+Slab:wght@900&display=swap');
 
 img {
   height: 100px;
@@ -55,7 +55,8 @@ button:hover {
 }
 ul {
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4a/World_map_with_four_colours.svg');
-  
+  background-position: center;
+  border: none;
 }
 .countryName {
   margin-top: 2px;
@@ -86,4 +87,14 @@ ul {
   font-size: 80px;
   text-shadow: 2px 2px 2px #000000;
   color: #e9e510;
+}
+h2,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', sans-serif;
+}
+h1 {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 80px;
 }
