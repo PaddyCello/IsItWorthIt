@@ -25,10 +25,12 @@ const CountryIndex = () => {
 
   return (
     <>
-      <input type ='text' placeholder='search' onChange={handleChange}></input>
+      <div className='search'>
+        <input type ='text' placeholder='search' onChange={handleChange}></input>
+      </div>
       <ul>
         {(filteredCountries.length > 0 ? filteredCountries : countries).map(country => {
-          return <Link to={`/countries/${country.name}`} key={country.name}><li>{country.name} <img src ={country.flag}/></li></Link>
+          return <Link to={`/countries/${country.name}`} key={country.name}><li><p className='countryName'>{country.name}</p> <img src ={country.flag}/></li></Link>
         })}
       </ul>
     </>

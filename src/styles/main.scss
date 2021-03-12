@@ -17,13 +17,14 @@ li {
   justify-content: center;
   margin: 20px;
   width: 180px;
-  height: 160px;
+  height: 180px;
   border: 1px solid #000000;
   box-shadow: 3px 3px 8px #000000;
   text-decoration: none;
   color: #000000;
   font-family: 'Open Sans', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
+  background-color: #f0ebeb;
 }
 input {
   height: 30px;
@@ -36,7 +37,7 @@ button {
   font-size: 20px;
   background-color: #ff0000;
   border-radius: 5px;
-  width: 100px;
+  width: 120px;
   height: 50px;
 }
 li:hover {
@@ -51,4 +52,16 @@ button:hover {
   background-color: #0000ff;
   color: #ffffff;
   cursor: pointer;
+}
+ul {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4a/World_map_with_four_colours.svg');
+  
+}
+.countryName {
+  margin-top: 2px;
+  text-decoration: none;
+}
+.search {
+  display: flex;
+  justify-content: center;
 }
