@@ -86,7 +86,7 @@ const CountryCard = () => {
               <option value = {countryInfo.weather.November.tAvg}>November</option>
               <option value = {countryInfo.weather.December.tAvg}>December</option>
             </select>
-            <h2>Average temperature: {month}C</h2>
+            <h2>Average temperature: {parseInt(month)}C</h2>
           </aside>
         </div>
       </div>
