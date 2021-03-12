@@ -65,3 +65,25 @@ ul {
   display: flex;
   justify-content: center;
 }
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://www.visualcapitalist.com/wp-content/uploads/2018/09/world-map-population-1200.png');
+  background-size: cover;
+  background-position: center;
+}
+.home-text {
+  font-family: 'MedievalSharp', cursive;
+  color: #ffffff;
+  letter-spacing: 1px;
+  margin: 10px 20px;
+}
+.home-big {
+  font-family: 'Roboto Slab', serif;
+  font-size: 80px;
+  text-shadow: 2px 2px 2px #000000;
+  color: #e9e510;
+}
