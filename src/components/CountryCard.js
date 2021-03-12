@@ -34,7 +34,7 @@ const CountryCard = () => {
 
   
   
-  const vaccinations = countryInfo.vaccinations
+  
   if (!countryInfo) return (
     <div className='fail'>
       <h4>Come on, pick a real country.</h4>
@@ -42,7 +42,7 @@ const CountryCard = () => {
     </div>
   )
   
-  
+  const vaccinations = countryInfo.vaccinations
   return (
     <div className='container-container'>
       <div className='card-container'>
