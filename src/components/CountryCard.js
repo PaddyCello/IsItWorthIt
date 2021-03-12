@@ -5,7 +5,7 @@ import { useParams, useHistory } from 'react-router-dom'
 const CountryCard = () => {
 
   const [countryInfo, setCountriesInfo] = useState(null)
-  const [month, setMonth] = useState([])
+  const [month, setMonth] = useState('?')
 
   const params = useParams()
   const history = useHistory()
@@ -40,33 +40,55 @@ const CountryCard = () => {
   console.log(vaccinations)
   return (
     <>
-      <h2>Average temperature: {month}C</h2>
-      <select onChange={handleChange}>
-        <option value = {countryInfo.weather.January.tAvg}>January</option>
-        <option value = {countryInfo.weather.February.tAvg}>February</option>
-        <option value = {countryInfo.weather.March.tAvg}>March</option>
-        <option value = {countryInfo.weather.April.tAvg}>April</option>
-        <option value = {countryInfo.weather.May.tAvg}>May</option>
-        <option value = {countryInfo.weather.June.tAvg}>June</option>
-        <option value = {countryInfo.weather.July.tAvg}>July</option>
-        <option value = {countryInfo.weather.August.tAvg}>August</option>
-        <option value = {countryInfo.weather.September.tAvg}>September</option>
-        <option value = {countryInfo.weather.October.tAvg}>October</option>
-        <option value = {countryInfo.weather.November.tAvg}>November</option>
-        <option value = {countryInfo.weather.December.tAvg}>December</option>
-      </select>
-      <button onClick={handleClick}>Escape</button>
-      <h4>Drinking Water: {countryInfo.water.short}</h4>
-      <h4>Travel Advice: {countryInfo.advise.UA.advise}</h4>
-      {parseInt(month) < 20 ? <h1>TOO COLD!!! Don’t bother unless you really don’t get the whole holiday thing.</h1> : <h1>WOOHOO!!!!! TOPS OFFFFF!!!!</h1>}
-      <h4>Vaccinations</h4>
-      {vaccinations.map(item => {
-        return <div key={item.name}>
-          <h5>{item.name}</h5>
-          <h6>{item.message}</h6>
-        </div> 
-      })
-      }
+      <div className='card-container'>
+        <div className='left-container'>
+          <aside className='header'>
+            <h2>{countryInfo.names.name} ({countryInfo.names.iso3})</h2>
+            <h4>Official Language: {countryInfo.language[0].language}</h4>
+            <h4>Time Zone: {countryInfo.timezone.name}</h4>
+            <h4>Currency: {countryInfo.currency.name}</h4>
+          </aside>
+          <aside className='vaccinations'>
+            <h4>Vaccinations:</h4>
+            {vaccinations.map(item => {
+              return <div key={item.name}>
+                <h5>{item.name}</h5>
+                <h6>{item.message}</h6>
+              </div> 
+            })
+            }
+          </aside>
+        </div>
+        <div className='right-container'>
+          <aside className='travel-advice'>
+            <h4>Drinking Water: {countryInfo.water.short}</h4>
+            <h4>Travel Advice: {countryInfo.advise.UA.advise}</h4>
+          </aside>
+          <aside className='weather'>
+            <h2>But more importantly, how is the weather???</h2>
+            <h4>Choose a month to find out:</h4>
+            <select onChange={handleChange}>
+              <option value = {countryInfo.weather.January.tAvg}>January</option>
+              <option value = {countryInfo.weather.February.tAvg}>February</option>
+              <option value = {countryInfo.weather.March.tAvg}>March</option>
+              <option value = {countryInfo.weather.April.tAvg}>April</option>
+              <option value = {countryInfo.weather.May.tAvg}>May</option>
+              <option value = {countryInfo.weather.June.tAvg}>June</option>
+              <option value = {countryInfo.weather.July.tAvg}>July</option>
+              <option value = {countryInfo.weather.August.tAvg}>August</option>
+              <option value = {countryInfo.weather.September.tAvg}>September</option>
+              <option value = {countryInfo.weather.October.tAvg}>October</option>
+              <option value = {countryInfo.weather.November.tAvg}>November</option>
+              <option value = {countryInfo.weather.December.tAvg}>December</option>
+            </select>
+            <h2>Average temperature: {month}C</h2>
+          </aside>
+        </div>
+      </div>
+      <footer>
+        {parseInt(month) < 20 ? <h1 className='message'>TOO COLD!!! Don’t bother.</h1> : <h1>WOOHOO!!!!! TOPS OFFFFF!!!!</h1>}
+        <button className='back-button' onClick={handleClick}>Back to the countries</button>
+      </footer>
     </>
     
   )
