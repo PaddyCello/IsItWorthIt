@@ -34,12 +34,17 @@ const CountryCard = () => {
 
   
   
-
-  if (!countryInfo) return null
   const vaccinations = countryInfo.vaccinations
-  console.log(vaccinations)
+  if (!countryInfo) return (
+    <div className='fail'>
+      <h4>Come on, pick a real country.</h4>
+      <button className='back-button' onClick={handleClick}>Back to the countries</button>
+    </div>
+  )
+  
+  
   return (
-    <>
+    <div className='container-container'>
       <div className='card-container'>
         <div className='left-container'>
           <aside className='header'>
@@ -86,10 +91,10 @@ const CountryCard = () => {
         </div>
       </div>
       <footer>
-        {parseInt(month) < 20 ? <h1 className='message'>TOO COLD!!! Don’t bother.</h1> : <h1>WOOHOO!!!!! TOPS OFFFFF!!!!</h1>}
+        {parseInt(month) < 20 ? <h1 className='message'>TOO COLD!!! Don’t bother.</h1> : <h1 className='yay-message'>WOOHOO!!!!! TOPS OFFFFF!!!!</h1>}
         <button className='back-button' onClick={handleClick}>Back to the countries</button>
       </footer>
-    </>
+    </div>
     
   )
 }
