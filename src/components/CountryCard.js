@@ -5,7 +5,7 @@ import { useParams, useHistory } from 'react-router-dom'
 const CountryCard = () => {
 
   const [countryInfo, setCountriesInfo] = useState(null)
-  const [month, setMonth] = useState('?')
+  const [month, setMonth] = useState(0)
 
   const params = useParams()
   const history = useHistory()
