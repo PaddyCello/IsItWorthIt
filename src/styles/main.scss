@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Open+Sans:wght@300&family=Roboto+Slab:wght@900&display=swap');
 
 img {
   height: 100px;
@@ -23,9 +23,32 @@ li {
   text-decoration: none;
   color: #000000;
   font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
 }
 input {
   height: 30px;
   font-size: 20px;
   font-family: 'Open Sans', sans-serif;
+}
+button {
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  background-color: #ff0000;
+  border-radius: 5px;
+  width: 100px;
+  height: 50px;
+}
+li:hover {
+  width: 200px;
+  height:180px;
+  background-color: #ff0000;
+}
+button:hover {
+  width: 150px;
+  height: 80px;
+  font-size: 30px;
+  background-color: #0000ff;
+  color: #ffffff;
+  cursor: pointer;
 }
