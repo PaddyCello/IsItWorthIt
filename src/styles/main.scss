@@ -35,7 +35,7 @@ button {
   color: #000000;
   font-family: 'MedievalSharp', cursive;
   font-size: 20px;
-  background-color: #ff0000;
+  background: linear-gradient(rgba(221, 94, 221, 0.6), rgba(221, 94, 221, 0.6));
   border-radius: 5px;
   width: 120px;
   height: 50px;
@@ -49,7 +49,7 @@ button:hover {
   width: 200px;
   height: 80px;
   font-size: 30px;
-  background-color: #f6b93b;
+  background: #f6b93b;
   color: #ffffff;
   cursor: pointer;
   transition: all 0.4s ease 0s;
