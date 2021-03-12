@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 img {
   height: 100px;
   width: 150px;
@@ -11,7 +13,19 @@ ul {
 li {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 20px;
-  max-width: 140px;
-
+  width: 180px;
+  height: 160px;
+  border: 1px solid #000000;
+  box-shadow: 3px 3px 8px #000000;
+  text-decoration: none;
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
+}
+input {
+  height: 30px;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
 }
