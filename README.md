@@ -1,5 +1,9 @@
 # Project Two - Is It Worth It?
 
+![screenshot](https://github.com/PaddyCello/IsItWorthIt/blob/107a3053dde86c82d9ef7e2f0004ad6622934267/screenshot/Screenshot%202021-05-02%20at%2008.28.04.png)
+
+![screenshot](https://github.com/PaddyCello/IsItWorthIt/blob/2e1a08bc6ca99bc0b94035780f9021d31d76b976/screenshot/Screenshot%202021-05-05%20at%2016.35.25.png)
+
 # Project Brief
 
 Working in a pair (with [Hamza Butt](https://github.com/HamzaaMB)), build a React app in two days that uses data from one or more third-party APIs.
@@ -11,10 +15,6 @@ Working in a pair (with [Hamza Butt](https://github.com/HamzaaMB)), build a Reac
 # Overview and Concept
 
 After initially drawing a blank while browsing through numerous free APIs, my teammate and I eventually realised that we could make something more interesting by combining two APIs: specifically, [restcountries.eu](https://restcountries.eu/) and [travelbriefing.org](https://travelbriefing.org/api). Our idea was that we could use the data from restcountries.eu to provide a list of countries to choose from, attractively displayed with all of the national flags, flex-wrapped in CSS. On selection of one of these list items, a new API request would be made to travelbriefing.org, returning information about various potential impediments to visiting the selected country - things like water safety, required vaccinations, and most crucially, whether or not the weather would be warm and sunny. Our intention throughout was to take a somewhat tongue-in-cheek approach to ensuring that the user, sick of Covid lockdowns and desperate for a holiday, chooses wisely.
-
-![screenshot](https://github.com/PaddyCello/IsItWorthIt/blob/107a3053dde86c82d9ef7e2f0004ad6622934267/screenshot/Screenshot%202021-05-02%20at%2008.28.04.png)
-
-![screenshot](https://github.com/PaddyCello/IsItWorthIt/blob/2e1a08bc6ca99bc0b94035780f9021d31d76b976/screenshot/Screenshot%202021-05-05%20at%2016.35.25.png)
 
 # Technologies Used
 
