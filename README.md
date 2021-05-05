@@ -18,12 +18,12 @@ After initially drawing a blank while browsing through numerous free APIs, my te
 
 # Technologies Used
 
-React
-JavaScript
-CSS
-Axios
-GitHub
-Netlify
+- React
+- JavaScript
+- CSS
+- Axios
+- GitHub
+- Netlify
 
 # Approach Taken
 
