@@ -1,9 +1,5 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) GA London React Template
+# Project Two - Is It Worth It?
 
-`yarn start` to run the development server
+# Project Brief
 
-`yarn build` to create a build directory
-
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+Working in a pair (with [Hamza Butt](https://github.com/HamzaaMB)), build a React app in two days that uses data from one or more third-party APIs.
