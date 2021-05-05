@@ -16,8 +16,6 @@ After initially drawing a blank while browsing through numerous free APIs, my te
 
 ![screenshot](https://github.com/PaddyCello/IsItWorthIt/blob/2e1a08bc6ca99bc0b94035780f9021d31d76b976/screenshot/Screenshot%202021-05-05%20at%2016.35.25.png)
 
-![screenshot] (https://github.com/PaddyCello/IsItWorthIt/blob/bb6062290c89a27dde7a892e16caea978a0dba35/screenshot/Screenshot%202021-05-05%20at%2016.37.16.png)
-
 # Technologies Used
 
 React
@@ -32,3 +30,5 @@ Netlify
 My teammate and I began by writing detailed pseudocode, using a Google Doc so that we could both contribute to it easily. We avoided being too ambitious in our scope, knowing that React and APIs were both very new to us, and that we were still discovering how to use them - as we had only two days to complete the project, our priority was to have a working product. Furthermore, this was also a first experience for both of us of working collaboratively on GitHub! Accordingly, we spent the majority of our time pair coding, making sure to take turns driving and navigating. The moments when we were not free to collaborate together were largely spent on further pseudocoding, researching, making mockups on Figma and generally ensuring that a lot of working code could be safely written and committed when we reconvened.
 
 Arguably the biggest feature of our project was the use of data from the restcountries.eu API request to provide the endpoints for requests to travelbriefing.org. Requests to travelbriefing.org for information on one country are structured thusly:
+
+![screenshot](https://github.com/PaddyCello/IsItWorthIt/blob/d19c55c981a9c6681b065f3ae0a7384d311a0693/screenshot/Screenshot%202021-05-05%20at%2016.56.03.png)
