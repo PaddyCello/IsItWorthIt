@@ -37,7 +37,7 @@ Accordingly, we needed a way to be able to pass the name of the country as param
 
 - Each page displaying information on a specific country would have a URL path that would end in a unique identifier (as is the convention):
 
-```
+```javascript
 <Route path='/countries/:id'>
   <CountryCard />
 </Route>
@@ -45,7 +45,7 @@ Accordingly, we needed a way to be able to pass the name of the country as param
 
 - Instead of using the ID as the unique identifier, use the name instead - this works, as no two countries are named identically:
 
-```
+```javascript
       <ul>
         {(filteredCountries.length > 0 ? filteredCountries : countries).map(country => {
           return <Link to={`/countries/${country.name}`} key={country.name}><li><p className='countryName'>{country.name}</p>               <img src ={country.flag}/></li></Link>
@@ -55,7 +55,7 @@ Accordingly, we needed a way to be able to pass the name of the country as param
 
 - Use params in the API request from the component that is linked to above (ie, the page that shows info on an individual country):
 
-```
+```javascript
       const getData = async () => {
         const response = await axios.get(`https://travelbriefing.org/${params.id}?format=json`)
         setCountriesInfo(response.data)
@@ -66,7 +66,7 @@ Although not infallible, this worked well enough for the purposes of a two-day h
 
 Another crucial feature was the functionality for determining whether the temperature at the destination would justify the journey. Travelbriefing.org provides average temperature per month as one of its fields (tAvg); we decided that 20 degrees Celsius was the target to beat. A dropdown menu was provided, for the user to select the month in which they intended to travel; the value for each item on the dropdown was set to the average temperature for the month displayed, and set to state:
 
-```
+```javascript
             <select onChange={handleChange}>
               <option value = {countryInfo.weather.January.tAvg}>January</option>
               <option value = {countryInfo.weather.February.tAvg}>February</option>
@@ -83,7 +83,7 @@ Another crucial feature was the functionality for determining whether the temper
             </select>
 ```
 
-```
+```javascript
 const handleChange = event => {
   setMonth(event.target.value)
 }
@@ -91,13 +91,13 @@ const handleChange = event => {
 
 A conditional render was then utilized in the return body, showing different statements depending on whether the average month was over or under the threshold:
 
-```
+```javascript
 {parseInt(month) < 20 ? <h1 className='message'>TOO COLD!!! Don’t bother.</h1> : <h1 className='yay-message'>WOOHOO!!!!! TOPS OFFFFF!!!!</h1>}
 ```
 
 With this working successfully, our next priority was to make the list of countries more user-friendly and searchable. I created a simple search bar, rendering the list conditionally based on addition or removal of letters: 
 
-```
+```javascript
       <ul>
         {(filteredCountries.length > 0 ? filteredCountries : countries).map(country => {
           return <Link to={`/countries/${country.name}`} key={country.name}><li><p className='countryName'>{country.name}</p>               <img src ={country.flag}/></li></Link>
@@ -107,7 +107,7 @@ With this working successfully, our next priority was to make the list of countr
 
 Initially it behaved in a somewhat volatile fashion, until my teammate surmised that it might have been making case-sensitive searches. This was easy enough to fix:
 
-```
+```javascript
   const handleChange = event => {
     const filteredArray = countries.filter(country => {
       return country.name.toUpperCase().includes(event.target.value.toUpperCase())
